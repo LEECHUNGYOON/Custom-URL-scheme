@@ -1,4 +1,5 @@
 {
+
 function handleOpenURL(url) {
 
     console.log(2);
@@ -10,6 +11,7 @@ function handleOpenURL(url) {
     return plugins.toast.showLongTop("전달 받은 값 없음");
 
 }
+
 }
 
 # Custom URL scheme Cordova/PhoneGap Plugin
