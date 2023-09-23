@@ -1,18 +1,11 @@
-{
-
+```javascript
 function handleOpenURL(url) {
-
-    console.log(2);
-
-    if (url) {
-        return plugins.toast.showLongTop(url);
-    }
-
-    return plugins.toast.showLongTop("전달 받은 값 없음");
-
+  console.log("received url: " + url);
 }
+```
 
-}
+
+
 
 # Custom URL scheme Cordova/PhoneGap Plugin
 #### launch your app by a link like this: `mycoolapp://`
