@@ -50,13 +50,20 @@ public class LaunchMyApp extends CordovaPlugin {
     } else if (ACTION_CHECKINTENT.equalsIgnoreCase(action)) {
       final Intent intent = this.cordova.getActivity().getIntent();
       final String intentString = intent.getDataString();
-      if (intentString != null && intent.getScheme() != null) {
-        lastIntentString = intentString;
-        callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, intent.getDataString()));
-      } else {
-        callbackContext.error("App was not started via the launchmyapp URL scheme. Ignoring this errorcallback is the best approach.");
-      }
+
+      // if (intentString != null && intent.getScheme() != null) {
+      //   lastIntentString = intentString;
+      //   callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, intent.getDataString()));
+      // } else {
+      //   callbackContext.error("App was not started via the launchmyapp URL scheme. Ignoring this errorcallback is the best approach.");
+      // }
+      
+      // 2023-09-24 yoon
+      // 다른앱에서 호출받은게 있던 없던 무조건 호출
+      callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, intent.getDataString()));
+      
       return true;
+
     } else if (ACTION_GETLASTINTENT.equalsIgnoreCase(action)) {
       if(lastIntentString != null) {
         callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, lastIntentString));
