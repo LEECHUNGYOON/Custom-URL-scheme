@@ -1,3 +1,5 @@
+# 외부에서 던진 파라미터가 있던 없던 무조건 호출하도록 수정함.
+
 ```javascript
 function handleOpenURL(url) {
   console.log("received url: " + url);
