@@ -2,14 +2,14 @@
 
 #import <Cordova/CDV.h>
 
-@interface Custom URL scheme : CDVPlugin {
+@interface CustomURLscheme : CDVPlugin {
   // Member variables go here.
 }
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command;
 @end
 
-@implementation Custom URL scheme
+@implementation CustomURLscheme
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command
 {
